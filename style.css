@@ -1,0 +1,309 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins', sans-serif;
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.8)
+    ),
+
+    url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+    padding:20px;
+
+}
+
+/* ================= CONTAINER ================= */
+
+.quiz-container{
+
+    width:100%;
+    max-width:650px;
+
+}
+
+/* ================= CARD ================= */
+
+.quiz-card,
+.result-card{
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    padding:50px 40px;
+
+    box-shadow:0 10px 40px rgba(0,0,0,0.5);
+
+    text-align:center;
+
+    animation:fadeIn 0.5s ease;
+
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* TITLE */
+
+.quiz-card h1,
+.result-card h1{
+
+    font-size:2.8rem;
+
+    margin-bottom:25px;
+
+}
+
+/* ================= QUESTION COUNT ================= */
+
+.question-count{
+
+    margin-bottom:20px;
+
+    color:#22c55e;
+
+    font-weight:500;
+
+}
+
+/* ================= PROGRESS BAR ================= */
+
+.progress-container{
+
+    width:100%;
+
+    height:12px;
+
+    background:rgba(255,255,255,0.1);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-bottom:25px;
+
+}
+
+/* BAR */
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:#22c55e;
+
+    transition:0.4s;
+
+}
+
+/* ================= TIMER ================= */
+
+.timer{
+
+    margin-bottom:25px;
+
+    font-size:1rem;
+
+    color:#facc15;
+
+    font-weight:600;
+
+}
+
+/* ================= QUESTION ================= */
+
+#question{
+
+    font-size:1.5rem;
+
+    margin-bottom:35px;
+
+    line-height:1.5;
+
+}
+
+/* ================= OPTIONS ================= */
+
+.options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* OPTION BUTTON */
+
+.option-btn{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.3s;
+
+    font-size:1rem;
+
+    text-align:left;
+
+}
+
+/* HOVER */
+
+.option-btn:hover{
+
+    background:#22c55e;
+
+    transform:translateX(5px);
+
+}
+
+/* CORRECT */
+
+.correct{
+
+    background:#22c55e !important;
+
+}
+
+/* WRONG */
+
+.wrong{
+
+    background:#ef4444 !important;
+
+}
+
+/* ================= BUTTONS ================= */
+
+#nextBtn,
+#restartBtn{
+
+    margin-top:35px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#3b82f6;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    transition:0.4s;
+
+}
+
+/* HOVER */
+
+#nextBtn:hover,
+#restartBtn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+
+}
+
+/* ================= RESULT ================= */
+
+#scoreText{
+
+    margin-top:20px;
+
+    font-size:2rem;
+
+    color:#22c55e;
+
+}
+
+/* HIDDEN */
+
+.hidden{
+
+    display:none;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:600px){
+
+    .quiz-card,
+    .result-card{
+
+        padding:40px 20px;
+
+    }
+
+    .quiz-card h1,
+    .result-card h1{
+
+        font-size:2rem;
+
+    }
+
+    #question{
+
+        font-size:1.2rem;
+
+    }
+
+}
