@@ -1,7 +1,7 @@
 # SCT-WD-3
 # Quiz Game Application
 
-website link: https://sct-wd-3-7yy5.onrender.com
+website link: https://sct-wd-3-tjff.onrender.com/
 ## 📌 Project Overview
 
 A modern and responsive Quiz Game Application built using HTML, CSS, and JavaScript.
